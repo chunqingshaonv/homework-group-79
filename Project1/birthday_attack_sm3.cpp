@@ -1,4 +1,4 @@
-#include"sm3.h"
+#include"birthday_attack_sm3.h"
 #include<time.h>
 
 string result;
