@@ -13,7 +13,7 @@ int main() {
 		padding_value = padding(to_string(i));
 		result = iteration(padding_value);
 		for (int j = 0; j < i; j++) {
-			if (checking_list[j].substr(0, 5) == result.substr(0, 5)) {
+			if (checking_list[j].substr(0, 4) == result.substr(0, 4)) {
 				cout << endl<< "可得到碰撞值是" << to_string(i) <<"时，" << "哈希值是" << endl;
 				for (int i = 0; i < 8; i++) {
 					cout << result.substr(i * 8, 8) << "  ";
