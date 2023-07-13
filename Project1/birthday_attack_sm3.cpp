@@ -6,7 +6,7 @@ string padding_value;
 string checking_list[65535];
 
 int main() {
-	cout << "ÉúÈÕ¹¥»÷ÕıÔÚÔËĞĞÖĞ£¬ÇëÉÔºó" << endl;
+	cout << "ç”Ÿæ—¥æ”»å‡»æ­£åœ¨è¿è¡Œä¸­ï¼Œè¯·ç¨å" << endl;
 	clock_t start = clock();
 
 	for (int i = 0; i < 65535; i++) {
@@ -14,23 +14,23 @@ int main() {
 		result = iteration(padding_value);
 		for (int j = 0; j < i; j++) {
 			if (checking_list[j].substr(0, 5) == result.substr(0, 5)) {
-				cout << endl<< "¿ÉµÃµ½Åö×²ÖµÊÇ" << to_string(i) <<"Ê±£¬" << "¹şÏ£ÖµÊÇ" << endl;
+				cout << endl<< "å¯å¾—åˆ°ç¢°æ’å€¼æ˜¯" << to_string(i) <<"æ—¶ï¼Œ" << "å“ˆå¸Œå€¼æ˜¯" << endl;
 				for (int i = 0; i < 8; i++) {
 					cout << result.substr(i * 8, 8) << "  ";
 				}
-				cout << endl << "¿ÉµÃµ½Åö×²ÖµÊÇ" << to_string(i) << "Ê±£¬" << "¹şÏ£ÖµÊÇ" << endl;
+				cout << endl << "å¯å¾—åˆ°ç¢°æ’å€¼æ˜¯" << to_string(j) << "æ—¶ï¼Œ" << "å“ˆå¸Œå€¼æ˜¯" << endl;
 				for (int i = 0; i < 8; i++) {
 					cout << checking_list[j].substr(i * 8, 8) << "  ";
 				}
 				clock_t ends = clock();
-				cout << endl << "ËùÓÃÊ±¼äÎª£º" << (double)(ends - start) / CLOCKS_PER_SEC <<"s" << endl;
+				cout << endl << "æ‰€ç”¨æ—¶é—´ä¸ºï¼š" << (double)(ends - start) / CLOCKS_PER_SEC <<"s" << endl;
 				return 0;
 			}
 		}
 		checking_list[i] = result;
 	}
-	cout << "¹¥»÷Ê§°ÜÎ´ÕÒµ½Åö×²";
+	cout << "æ”»å‡»å¤±è´¥æœªæ‰¾åˆ°ç¢°æ’";
 	clock_t ends = clock();
-	cout << endl << "ËùÓÃÊ±¼äÎª£º" << (double)(ends - start) / CLOCKS_PER_SEC << "s" << endl;
+	cout << endl << "æ‰€ç”¨æ—¶é—´ä¸ºï¼š" << (double)(ends - start) / CLOCKS_PER_SEC << "s" << endl;
 	return 0;
 }
